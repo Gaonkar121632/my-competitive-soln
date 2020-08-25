@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/javascript">
+
+function showWindow(){
+var len = navigator.plugins.length;
+newWin = window.open("", "", "height=400,width=500");
+newWin.document.write("<p>Plug-In Info:</p>");
+for(var i = 0; i < len; i++){
+newWin.document.write("<li>" +
+navigator.plugins[i].description + "</li>");
+}
+newWin.document.close()
+}
+
+</script>
+</head>
+<body>
+<form>
+<input type="button" value="Show Plug-In Information"
+onclick="showWindow()">
+</form>
+</body>
+</html>
